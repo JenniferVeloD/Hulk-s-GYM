@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    display: flex;
+    background-color: #121212;
+    border-radius: 0;
+    overflow: hidden;
+    width: 800px;
+    max-width: 90%;
+}
+
+.form-section, .image-section {
+    padding: 40px;
+    flex: 1;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-section h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.password-field {
+    position: relative;
+}
+
+.toggle-eye {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.toggle-eye img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+}
+
+button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.image-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+}
