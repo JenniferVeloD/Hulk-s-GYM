@@ -32,13 +32,72 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "Gestion_Inventario",
+    'Inicio_Sesion',
+    'Gestion_Membresia',
+   
 ]
+#jazzmin settings
+JAZZMIN_SETTINGS ={
+    "welcome_sign": "Inicio de Sesion",
+    "site_title": "Hulk's Systems",
+    "site_brand": "Hulk's GYM",
+    "site_logo": "imagenes/Hulk.jpg",
+    "login_logo": "imagenes/Hulk.jpg",
+
+    "show_ui_builder": False,#  Poner True para editar wl disenio de la pagina
+    "icons": { 
+    "auth": "fas fa-users-cog",
+    "auth.user": "fas fa-user",
+    "auth.Group": "fas fa-users",
+    "Gestion_Inventario.equipo": "fas fa-dumbbell",
+    "Gestion_Membresia.membresia": "fas fa-address-card",
+    },
+
+  
+     "copyright": "Hulk's GYM",
+   
+    
+}
+
+JAZZMIN_UI_TWEAKS = {
+    "navbar_small_text": False,
+    "footer_small_text": True,
+    "body_small_text": False,
+    "brand_small_text": False,
+    "brand_colour": "navbar-success",
+    "accent": "accent-success",
+    "navbar": "navbar-success navbar-dark",
+    "no_navbar_border": False,
+    "navbar_fixed": False,
+    "layout_boxed": False,
+    "footer_fixed": False,
+    "sidebar_fixed": False,
+    "sidebar": "sidebar-dark-success",
+    "sidebar_nav_small_text": False,
+    "sidebar_disable_expand": False,
+    "sidebar_nav_child_indent": False,
+    "sidebar_nav_compact_style": False,
+    "sidebar_nav_legacy_style": False,
+    "sidebar_nav_flat_style": False,
+    "theme": "darkly",
+    "dark_mode_theme": "darkly",
+    "button_classes": {
+        "primary": "btn-primary",
+        "secondary": "btn-secondary",
+        "info": "btn-info",
+        "warning": "btn-warning",
+        "danger": "btn-danger",
+        "success": "btn-success"
+    }
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -103,7 +162,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "es-mx"
 
 TIME_ZONE = "UTC"
 
@@ -126,5 +185,5 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-LOGIN_REDIRECT_URL = '#' 
+LOGIN_REDIRECT_URL = 'google.com' 
 LOGOUT_REDIRECT_URL = 'login'
