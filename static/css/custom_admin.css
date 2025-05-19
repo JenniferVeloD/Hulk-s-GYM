@@ -1,0 +1,105 @@
+/* Solución específica para los selectores de permisos con tema darkly - Versión Morada */
+
+/* Hacer visibles las opciones en los selectores */
+.selector select option {
+    color: #212529 !important; /* Color oscuro para el texto */
+    background-color: #f8f9fa !important; 
+}
+
+/* Estilo para selector disponible */
+.selector-available select, .selector-chosen select {
+    background-color: #f8f9fa !important; 
+    color: #212529 !important; 
+    border: 1px solid #6f42c1 !important;
+}
+
+.selector-available-title label, .selector-chosen-title label {
+    color: #f8f9fa !important; 
+    font-weight: bold;
+}
+
+.selector-available-title p.helptext, .selector-chosen-title p.helptext {
+    color: #adb5bd !important;
+}
+
+
+.selector-chooser button, .selector-chooseall, .selector-clearall {
+    background-color: #6f42c1 !important; 
+    color: white !important;
+    border-color: #6f42c1 !important;
+}
+
+.selector-chooser button:hover, .selector-chooseall:hover, .selector-clearall:hover {
+    background-color: #5a32a3 !important; 
+    border-color: #4c2888 !important;
+}
+
+
+.selector-filter input {
+    background-color: #f8f9fa !important;
+    color: #212529 !important;
+    border: 1px solid #6f42c1 !important; 
+}
+
+
+.selector {
+    border: 1px solid #6f42c1 !important; 
+    background-color: #343a40 !important;
+    padding: 10px !important;
+    border-radius: 5px !important;
+}
+
+
+.selector select option:checked,
+.selector select option:hover {
+    background-color: #6f42c1 !important; 
+    color: white !important;
+}
+
+
+.selector select:focus option:checked {
+    background-color: #6f42c1 !important;
+    color: white !important;
+}
+
+label {
+    color: #f8f9fa !important;
+}
+
+
+.card {
+    background-color: #343a40 !important;
+    border: 1px solid #6f42c1 !important;
+}
+
+.card-body {
+    background-color: #343a40 !important;
+}
+
+.help-block {
+    color: #adb5bd !important;
+}
+
+select, select option {
+    background-color: white !important;
+    color: black !important;
+}
+
+/* Estilo para elementos seleccionados */
+::-moz-selection {
+    background-color: #6f42c1 !important;
+    color: white !important;
+}
+
+::selection {
+    background-color: #6f42c1 !important;
+    color: white !important;
+}
+
+select option:focus,
+select option:checked,
+select option:active {
+    background-color: #6f42c1 !important; 
+    color: white !important;
+}
+

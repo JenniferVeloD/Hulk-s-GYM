@@ -42,10 +42,12 @@ INSTALLED_APPS = [
     "Gestion_Inventario",
     'Inicio_Sesion',
     'Gestion_Membresia',
+    'Gestion_Productos'
    
 ]
 #jazzmin settings
 JAZZMIN_SETTINGS ={
+    "theme": "darkly",
     "welcome_sign": "Inicio de Sesion",
     "site_title": "Hulk's Systems",
     "site_brand": "Hulk's GYM",
@@ -63,6 +65,7 @@ JAZZMIN_SETTINGS ={
 
   
      "copyright": "Hulk's GYM",
+     "custom_css": "css/custom_admin.css",
    
     
 }
@@ -96,7 +99,8 @@ JAZZMIN_UI_TWEAKS = {
         "warning": "btn-warning",
         "danger": "btn-danger",
         "success": "btn-success"
-    }
+    },
+    
 }
 
 MIDDLEWARE = [
@@ -164,7 +168,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "es-mx"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/Ciudad_Juarez"
 
 USE_I18N = True
 

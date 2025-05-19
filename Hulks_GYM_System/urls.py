@@ -18,8 +18,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Inicio_Sesion import views as login_views
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('login/', login_views.login_view, name='login'),
+    path('', RedirectView.as_view(url='/login/', permanent=False)),
 ]
