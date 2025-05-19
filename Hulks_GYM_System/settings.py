@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     "Gestion_Inventario",
     'Inicio_Sesion',
     'Gestion_Membresia',
-   
+    'Gestion_Empleados',
+    "Gestion_Clientes",
 ]
 #jazzmin settings
 JAZZMIN_SETTINGS ={
@@ -60,8 +61,6 @@ JAZZMIN_SETTINGS ={
     "Gestion_Inventario.equipo": "fas fa-dumbbell",
     "Gestion_Membresia.membresia": "fas fa-address-card",
     },
-
-  
      "copyright": "Hulk's GYM",
    
     
