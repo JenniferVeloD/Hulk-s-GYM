@@ -3,7 +3,7 @@ from django.contrib import messages
 
 
 # Create your views here.
-
+"""
 def agregar_membresia(request):
     if request.method == "POST":
         form = MembresiaForm(request.POS)
@@ -48,3 +48,4 @@ def eliminar_membresia(request, membresia_id):
     return render(request, 'membresia/eliminar_membresia.html', {
         'membresia': membresia
     })
+"""

@@ -1,3 +1,10 @@
+/*!
+ * @file login.css
+ * @brief Estilos para la página de inicio de sesión de Hulks GYM.
+ * @date 2025-05-24
+ */
+
+/*! @brief Estilos generales del documento */
 body {
     margin: 0;
     padding: 0;
@@ -7,6 +14,7 @@ body {
     height: 100vh;
 }
 
+/*! @brief Contenedor principal centrado vertical y horizontalmente */
 .container {
     display: flex;
     justify-content: center;
@@ -14,6 +22,7 @@ body {
     height: 100vh;
 }
 
+/*! @brief Caja que contiene el formulario y la imagen */
 .login-box {
     display: flex;
     background-color: #121212;
@@ -23,27 +32,32 @@ body {
     max-width: 90%;
 }
 
+/*! @brief Secciones del formulario e imagen dentro de la caja */
 .form-section, .image-section {
     padding: 40px;
     flex: 1;
 }
 
+/*! @brief Sección del formulario con dirección de columnas */
 .form-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+/*! @brief Título de la sección del formulario */
 .form-section h2 {
     margin-bottom: 30px;
     font-size: 32px;
     font-weight: normal;
 }
 
+/*! @brief Agrupación de elementos dentro del formulario */
 .form-group {
     margin-bottom: 20px;
 }
 
+/*! @brief Etiquetas para campos del formulario */
 label {
     display: block;
     margin-bottom: 8px;
@@ -51,6 +65,7 @@ label {
     font-size: 18px;
 }
 
+/*! @brief Campos de entrada para texto y contraseña */
 input[type="text"], input[type="password"] {
     width: 100%;
     padding: 12px 15px;
@@ -61,10 +76,12 @@ input[type="text"], input[type="password"] {
     background-color: #fff;
 }
 
+/*! @brief Contenedor del campo de contraseña para incluir icono */
 .password-field {
     position: relative;
 }
 
+/*! @brief Icono de ojo para alternar visibilidad de la contraseña */
 .toggle-eye {
     position: absolute;
     right: 15px;
@@ -73,12 +90,14 @@ input[type="text"], input[type="password"] {
     cursor: pointer;
 }
 
+/*! @brief Imagen dentro del icono de visibilidad */
 .toggle-eye img {
     width: 20px;
     height: 20px;
     opacity: 0.7;
 }
 
+/*! @brief Botón de envío del formulario */
 button {
     width: 100%;
     background-color: #4CAF50;
@@ -92,10 +111,12 @@ button {
     margin-top: 20px;
 }
 
+/*! @brief Cambio de color del botón al pasar el cursor */
 button:hover {
     background-color: #45a049;
 }
 
+/*! @brief Sección de imagen con logo y nombre del gimnasio */
 .image-section {
     text-align: center;
     display: flex;
@@ -104,14 +125,17 @@ button:hover {
     align-items: center;
 }
 
+/*! @brief Título de la sección de imagen */
 .image-section h1 {
     margin-bottom: 20px;
     font-size: 32px;
     font-weight: normal;
 }
 
+/*! @brief Imagen del logotipo */
 .image-section img {
     max-width: 100%;
     height: auto;
     max-height: 300px;
 }
+

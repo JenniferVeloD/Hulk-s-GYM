@@ -15,6 +15,9 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+"""
+Ruta base del directorio del proyecto
+"""
 
 
 # Quick-start development settings - unsuitable for production
@@ -22,16 +25,27 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-gdlwc-5t-*8nu6c^p#@b3l8saq&4d8&j11nkfabpgduxkh!d04"
+"""
+ Clave secreta utilizada para la firma criptográfica en Django
+"""
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+"""
+Bandera de modo de depuración
+"""
 ALLOWED_HOSTS = []
+"""
+Lista de nombres de host que la instancia de Django puede servir
+"""
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    """
+    Lista de todas las aplicaciones Django activas en el proyecto
+    """
     'jazzmin',
     "django.contrib.admin",
     "django.contrib.auth",
@@ -48,8 +62,17 @@ INSTALLED_APPS = [
     "Gestion_Ventas"
 
 ]
+
+
+
 #jazzmin settings
 JAZZMIN_SETTINGS ={
+
+    """
+    Configuraciones específicas para el tema del administrador Jazzmin. Personaliza la apariencia del 
+    panel de administración de Django
+    """
+
     "theme": "darkly",
     "welcome_sign": "Inicio de Sesion",
     "site_title": "Hulk's Systems",
@@ -78,6 +101,11 @@ JAZZMIN_SETTINGS ={
 }
 
 JAZZMIN_UI_TWEAKS = {
+    """
+    Configura ajustes de la interfaz de usuario de Jazzmin (detalles como tamaños de texto, 
+    colores de la barra de navegación y estilos de la barra lateral)
+    """
+
     "navbar_small_text": False,
     "footer_small_text": True,
     "body_small_text": False,
@@ -111,6 +139,9 @@ JAZZMIN_UI_TWEAKS = {
 }
 
 MIDDLEWARE = [
+    """
+    Lista de clases middleware que procesan solicitudes y respuestas 
+    """
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -121,9 +152,16 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "Hulks_GYM_System.urls"
+"""
+Ruta al módulo de URL principal del proyecto
+"""
+
 
 TEMPLATES = [
     {
+        """
+        Configuraciones para renderiza los archivos de plantilla HTML del pryecto
+        """
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [os.path.join(BASE_DIR, 'templates')],
         "APP_DIRS": True,
@@ -138,12 +176,17 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "Hulks_GYM_System.wsgi.application"
-
+"""
+Ruta al objeto de aplicación WSGI del proyecto
+"""
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
+    """
+    Configuraciones para las bases de datos del proyecto
+    """
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
@@ -168,14 +211,21 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
-
+"""
+Validadores de contraseñas utilizados por el sistema de autenticación
+"""
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
 LANGUAGE_CODE = "es-mx"
-
+"""
+Código de idioma para el proyecto
+"""
 TIME_ZONE = "America/Ciudad_Juarez"
+"""
+Zona horaria para el proyecto.
+"""
 
 USE_I18N = True
 
@@ -186,15 +236,31 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = "static/"
+"""
+Url base para ubicar archivos estáticos (CSS, JavaScript, imágenes)
+"""
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
+    """
+    Rutas donde Django busca archivos estáticos
+    """
+
 ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+"""
+Campo predeterminado para las claves primarias
+"""
 
 LOGIN_REDIRECT_URL = 'google.com' 
+"""
+Url a la que se redirige a los usuarios después de un inicio de sesión exitoso
+"""
 LOGOUT_REDIRECT_URL = 'login'
+"""
+Url a la que se redirige a los usuarios después de cerrar sesión
+"""

@@ -1,105 +1,141 @@
-/* Solución específica para los selectores de permisos con tema darkly - Versión Morada */
+/*!
+ * @file login.css
+ * @brief Estilos para la página de inicio de sesión de Hulks GYM.
+ * @date 2025-05-24
+ */
 
-/* Hacer visibles las opciones en los selectores */
-.selector select option {
-    color: #212529 !important; /* Color oscuro para el texto */
-    background-color: #f8f9fa !important; 
+/*! @brief Estilos generales del cuerpo del documento */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
 }
 
-/* Estilo para selector disponible */
-.selector-available select, .selector-chosen select {
-    background-color: #f8f9fa !important; 
-    color: #212529 !important; 
-    border: 1px solid #6f42c1 !important;
+/*! @brief Contenedor principal centrado vertical y horizontalmente */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.selector-available-title label, .selector-chosen-title label {
-    color: #f8f9fa !important; 
-    font-weight: bold;
+/*! @brief Caja que contiene el formulario y la imagen */
+.login-box {
+    display: flex;
+    background-color: #121212;
+    border-radius: 0;
+    overflow: hidden;
+    width: 800px;
+    max-width: 90%;
 }
 
-.selector-available-title p.helptext, .selector-chosen-title p.helptext {
-    color: #adb5bd !important;
+/*! @brief Secciones del formulario e imagen dentro de la caja */
+.form-section, .image-section {
+    padding: 40px;
+    flex: 1;
 }
 
-
-.selector-chooser button, .selector-chooseall, .selector-clearall {
-    background-color: #6f42c1 !important; 
-    color: white !important;
-    border-color: #6f42c1 !important;
+/*! @brief Sección del formulario con dirección de columnas */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.selector-chooser button:hover, .selector-chooseall:hover, .selector-clearall:hover {
-    background-color: #5a32a3 !important; 
-    border-color: #4c2888 !important;
+/*! @brief Título de la sección del formulario */
+.form-section h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: normal;
 }
 
-
-.selector-filter input {
-    background-color: #f8f9fa !important;
-    color: #212529 !important;
-    border: 1px solid #6f42c1 !important; 
+/*! @brief Agrupación de elementos dentro del formulario */
+.form-group {
+    margin-bottom: 20px;
 }
 
-
-.selector {
-    border: 1px solid #6f42c1 !important; 
-    background-color: #343a40 !important;
-    padding: 10px !important;
-    border-radius: 5px !important;
-}
-
-
-.selector select option:checked,
-.selector select option:hover {
-    background-color: #6f42c1 !important; 
-    color: white !important;
-}
-
-
-.selector select:focus option:checked {
-    background-color: #6f42c1 !important;
-    color: white !important;
-}
-
+/*! @brief Etiquetas para campos del formulario */
 label {
-    color: #f8f9fa !important;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: normal;
+    font-size: 18px;
 }
 
-
-.card {
-    background-color: #343a40 !important;
-    border: 1px solid #6f42c1 !important;
+/*! @brief Campos de entrada para texto y contraseña */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #fff;
 }
 
-.card-body {
-    background-color: #343a40 !important;
+/*! @brief Contenedor del campo de contraseña para incluir icono */
+.password-field {
+    position: relative;
 }
 
-.help-block {
-    color: #adb5bd !important;
+/*! @brief Icono de ojo para alternar visibilidad de la contraseña */
+.toggle-eye {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
 
-select, select option {
-    background-color: white !important;
-    color: black !important;
+/*! @brief Imagen dentro del icono de visibilidad */
+.toggle-eye img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
 }
 
-/* Estilo para elementos seleccionados */
-::-moz-selection {
-    background-color: #6f42c1 !important;
-    color: white !important;
+/*! @brief Botón de envío del formulario */
+button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
 }
 
-::selection {
-    background-color: #6f42c1 !important;
-    color: white !important;
+/*! @brief Cambio de color del botón al pasar el cursor */
+button:hover {
+    background-color: #45a049;
 }
 
-select option:focus,
-select option:checked,
-select option:active {
-    background-color: #6f42c1 !important; 
-    color: white !important;
+/*! @brief Sección de imagen con logo y nombre del gimnasio */
+.image-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+/*! @brief Título de la sección de imagen */
+.image-section h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+/*! @brief Imagen del logotipo */
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+}
+ 

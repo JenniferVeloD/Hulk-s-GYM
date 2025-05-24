@@ -29,3 +29,7 @@ urlpatterns = [
     path('', login_views.login_view, name='login'),
 
 ]
+
+"""
+Urls del sistema
+"""
